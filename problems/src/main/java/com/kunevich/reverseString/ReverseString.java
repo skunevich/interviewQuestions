@@ -16,7 +16,7 @@ public class ReverseString {
             reversedString = reversedString + toReverseCharArray[i];
         }
 
-        return reversedString.toString();
+        return reversedString;
     }
 
     public String reverseStringUsingRecursion(String toReverse) {
@@ -24,5 +24,20 @@ public class ReverseString {
             return toReverse;
         }
         return reverseStringUsingRecursion(toReverse.substring(1)) + toReverse.charAt(0);
+    }
+
+    public String reverseStringSwap(String toReverse) {
+        if(toReverse.length() <= 1) {
+            return toReverse;
+        }
+
+        char[] reversed = toReverse.toCharArray();
+        for(int i = 0; i<reversed.length/2; i++) {
+            char temp = reversed[reversed.length-i-1];
+            reversed[reversed.length-i-1] = reversed[i];
+            reversed[i] = temp;
+        }
+
+        return new String(reversed);
     }
 }

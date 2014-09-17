@@ -33,4 +33,10 @@ public class ReverseStringTest {
         assertEquals(REVERSED_STRING, actual);
     }
 
+    @Test
+    public void testReverseStringSwap() {
+        String actual = reverseString.reverseStringSwap(STRING_TO_REVERSE);
+        assertEquals(REVERSED_STRING, actual);
+    }
+
 }
